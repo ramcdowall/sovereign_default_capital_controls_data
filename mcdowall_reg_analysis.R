@@ -68,7 +68,7 @@ reg2b = plm(boi ~ Yield_mean   + Govt_GDP+ GDP_growth,
             index = c("Country","Year"), model="within")
 summary(reg2b)
 
-#Country Fixed Effects Regression
+#Country  + Time Fixed Effects Regression
 reg3b = plm(boi ~ Yield_mean   + Govt_GDP+ GDP_growth,
             data = Data_SOC, 
             #family = binomial('probit'),
@@ -89,7 +89,7 @@ reg2c = plm(kai ~ Yield_mean + Govt_GDP + GDP_growth,
             index = c("Country","Year"), model="within")
 summary(reg2c)
 
-#Country Fixed Effects Regression
+#Country +Time Fixed Effects Regression
 reg3c = plm(kai ~ Yield_mean   + Govt_GDP + GDP_growth,
             data = Data_SOC, 
             #family = binomial('probit'),
@@ -100,7 +100,7 @@ summary(reg3c)
 stargazer(reg1b, reg2b, reg3b, reg1c, reg2c, reg3c,
           se=list(clse(reg1b),clse(reg2b),clse(reg3b), clse(reg1c),clse(reg2c), clse(reg3c)), 
           title="Panel regressions, clustered SEs", type="text", 
-          column.labels=c( "Pooled OLS", "Country FE", "Two Ways", "Pooled OLS", "Country FE"), 
+          column.labels=c( "Pooled OLS", "Country FE", "Two Ways", "Pooled OLS", "Country FE", "Two Ways"), 
           df=FALSE, digits=4)
 
 
