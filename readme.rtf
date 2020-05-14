@@ -1,0 +1,44 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf400
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Sovereign Debt and Capital Controls\
+Robert A. McDowall\
+\
+=== Theoretical\
+mcdowall_cert.m\
+	Certainty case solution\
+mcdowall_uncert.m\
+	Uncertainty case. Pre-calculated example in uncert_example.mat. \
+\
+=== Empirical \
+mcdowall_reg_analysis.R\
+	Regression analyses\
+\
+==============================\
+===Data Sources\
+\
+The inflow control indices of Fernandez et. al (2016) are utilized as a measure of capital controls. The overall inflow index extends from 1995 to 2016, while the bond inflow index begins in 1997. \
+\
+Government spending statistics are collected from World Bank National Accounts and OECD National Accounts datasets. 10-year bond yield data come from the \\textit\{investing.com\} World Government Bond database, FRED, and respective central bank databases. The 10-year spread is defined as the difference between the rate on a sovereign's 10-year bond and that of a 10-year Treasury. Monthly yields are annualized via a simple arithmetic mean. \
+\
+GDP growth rates from the IMF World Economic Outlook are included to control for business cycle effects. Any country with less than 10 years of joint observations was dropped from the data set. As in Aguiar and Gopinath (2007), I exclude all Group of Seven countries other than Canada to define small open economies and to obtain the final sample.\
+\
+The final collection of small open economies includes Australia, Austria, Belgium, Bulgaria, Canada, Chile, China, Colombia, Czech Republic, Denmark, Finland, Ghana, Greece, Hong Kong, Hungary, Iceland, India, Indonesia, Ireland, Israel, Kenya, Korea, Malaysia, Malta, Mexico, Netherlands, New Zealand, Norway, Pakistan, Philippines, Poland, Portugal, Romania, Russia, Singapore, Slovenia, South Africa, Spain, Sweden, Switzerland, Thailand, Turkey, and Vietnam. \
+\
+==== Data Dictionary\
+\
+cc_indices_uribe_et_al.csv  \
+	Capital control indices due to Fernandez et. al (2016) [{\field{\*\fldinst{HYPERLINK "http://www.columbia.edu/~mu2166/fkrsu/"}}{\fldrslt http://www.columbia.edu/~mu2166/	fkrsu/}}]\
+\
+mcdowall_10yr_spread_monthly.csv\
+	Database of monthly 10 year government bond yields and bond spreads (defined as country i 	10 yr - US 10 yr )\
+\
+mcdowall_sovdefcc_data_annual.csv\
+	Combines above 2 with IMF, World Bank, and OECD statistics for regression analysis. Monthly 	10 yr is aggregated to annual level via simple arithmetic mean.  \
+\
+==================\
+}
