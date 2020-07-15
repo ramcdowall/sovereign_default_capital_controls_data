@@ -1,4 +1,4 @@
-%% Sovereign Debt and Capital Controls
+%% Sovereign Default and Capital Controls
 % Matlab File 1: certainty case
 % By: Robert A. McDowall
 
